@@ -1,0 +1,120 @@
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Montserrat'>
+<style>
+  body {
+    background-image: linear-gradient(145deg, #54BBAB, #003087, #000B1E);
+  }
+
+  .titulo {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .titulo p {
+    font-family: Montserrat;
+    color: #fff;
+    font-size: 5em;
+  }
+
+  .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .caixa {
+    left: 50%;
+    animation: float 3s ease-out infinite;
+  }
+
+  @keyframes float {
+    50% {
+      transform: translate(0, 20px);
+    }
+  }
+
+  .shadowFrame {
+    width: 130px;
+    margin-top: 15px;
+  }
+
+  .shadow {
+    animation: shrink 3s ease-out infinite;
+    transform-origin: center center;
+
+    ellipse {
+      transform-origin: center center;
+    }
+  }
+
+  @keyframes shrink {
+    0% {
+      width: 90%;
+      margin: 0 5%;
+    }
+
+    50% {
+      width: 60%;
+      margin: 0 18%;
+    }
+
+    100% {
+      width: 90%;
+      margin: 0 5%;
+    }
+  }
+
+  .butoes {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  button {
+    width: 10em;
+    position: relative;
+    height: 3.5em;
+    border: 3px ridge #003087;
+    outline: none;
+    background-color: transparent;
+    color: white;
+    transition: 1s;
+    border-radius: 0.3em;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  button:hover::before,
+  button:hover::after {
+    transform: scale(0)
+  }
+
+  button:hover {
+    box-shadow: inset 0px 0px 25px #1479EA;
+  }
+
+  .comunicacao {
+    margin-right: 2em;
+  }
+
+</style>
+<div class='titulo'>
+  <p>Eventograma</p>
+</div>
+
+<div class='container'>
+  <img src='https://www.caixa.gov.br//PublishingImages/nova-home/icones/x-volume-negativa-54.png' class='caixa'>
+</div>
+
+<div class='butoes'>
+  <button class='comunicacao'>
+    Comunicação
+  </button>
+  <button class='comunicacao'>
+    Aniversário Caixa
+  </button>
+</div>
