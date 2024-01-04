@@ -1,0 +1,188 @@
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Montserrat'>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        background-image: linear-gradient(145deg, #54BBAB 0%, #003087 70%, #000B1E 100%);
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+
+    /*waves****************************/
+
+
+    .box {
+        position: fixed;
+        top: 0;
+        transform: rotate(80deg);
+        left: -10%;
+    }
+
+    .wave {
+        position: fixed;
+        top: 0;
+        left: 0;
+        opacity: .4;
+        position: absolute;
+        top: 3%;
+        left: 10%;
+        background: linear-gradient(0deg, #54BBAB 0%, #003087 70%, #000B1E 100%);
+        width: 1500px;
+        height: 1300px;
+        margin-left: -150px;
+        margin-top: -250px;
+        transform-origin: 50% 48%;
+        border-radius: 43%;
+        animation: drift 10s infinite linear;
+    }
+
+    .wave.-three {
+        animation: drift 11s infinite linear;
+        position: fixed;
+        background-color: linear-gradient(0deg, #54BBAB 0%, #003087 70%, #000B1E 100%);
+    }
+
+    .wave.-two {
+        animation: drift 12s infinite linear;
+        opacity: .1;
+        background: linear-gradient(0deg, #54BBAB 0%, #003087 70%, #000B1E 100%);
+        position: fixed;
+    }
+
+    .box:after {
+        content: '';
+        display: block;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 11;
+        transform: translate3d(0, 0, 0);
+    }
+
+    @keyframes drift {
+        from {
+            transform: rotate(0deg);
+        }
+
+        from {
+            transform: rotate(360deg);
+        }
+    }
+
+
+    .titulo {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .titulo p {
+        font-family: Montserrat;
+        color: #fff;
+        font-size: 5em;
+    }
+
+    .container {
+        position: absolute;
+        top: 38%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .caixa {
+        top: 0%;
+        left: 50%;
+    }
+
+    .shadowFrame {
+        width: 130px;
+        margin-top: 15px;
+    }
+
+    .shadow {
+        animation: shrink 3s ease-out infinite;
+        transform-origin: center center;
+
+        ellipse {
+            transform-origin: center center;
+        }
+    }
+
+    @keyframes shrink {
+        0% {
+            width: 90%;
+            margin: 0 5%;
+        }
+
+        50% {
+            width: 60%;
+            margin: 0 18%;
+        }
+
+        100% {
+            width: 90%;
+            margin: 0 5%;
+        }
+    }
+
+    .butoes {
+        position: absolute;
+        top: 65%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    button {
+        width: 10em;
+        position: relative;
+        height: 3.5em;
+        border: 3px ridge #003087;
+        outline: none;
+        background-color: transparent;
+        color: white;
+        transition: 1s;
+        border-radius: 0.3em;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    button:hover::before,
+    button:hover::after {
+        transform: scale(0)
+    }
+
+    button:hover {
+        box-shadow: inset 0px 0px 25px #1479EA;
+    }
+
+    .comunicacao {
+        margin-right: 2em;
+    }
+</style>
+
+
+<div class='container'>
+    <img src='https://www.caixa.gov.br//PublishingImages/nova-home/icones/x-volume-negativa-54.png' class='caixa'>
+</div>
+
+<div class='titulo'>
+    <p>Eventograma</p>
+</div>
+
+<div class='butoes'>
+    <button class='comunicacao'>
+        Comunicação
+    </button>
+    <button class='comunicacao'>
+        Aniversário Caixa
+    </button>
+</div>
+
+<div class='box'>
+    <div class='wave -one'></div>
+    <div class='wave -two'></div>
+    <div class='wave -three'></div>
+</div>
